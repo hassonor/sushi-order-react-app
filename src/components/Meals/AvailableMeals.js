@@ -2,7 +2,7 @@ import styles from './AvailableMeals.module.css';
 import Card from "../UI/Card/Card";
 import MealItem from "./MealItem/MealItem";
 
-const DUMMY_MEALS = [
+const DUMMY_ITEMS = [
     {
         id: 'm1',
         name: 'Keta Keta',
@@ -30,8 +30,8 @@ const DUMMY_MEALS = [
 ];
 
 const AvailableMeals = props => {
-    const mealsList = DUMMY_MEALS.map(meal=><MealItem key={meal.id}
-                                                      meal={meal} />);
+    const mealsList = DUMMY_ITEMS.map(item=><MealItem key={item.id}
+                                                      item={item} />);
 
     return (
 
