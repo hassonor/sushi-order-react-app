@@ -1,6 +1,6 @@
 import styles from './MealsSummary.module.css';
 
-const MealsSummary = () => {
+const MealsSummary = ():JSX.Element => {
     return (
         <section className={styles.summary}>
             <h2>Delicious Food, Delivered To You</h2>

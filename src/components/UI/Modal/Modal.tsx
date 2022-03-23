@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom';
 import styles from './Modal.module.css';
 import Card from "../Card/Card";
 
-const Backdrop = (props) => {
+const Backdrop = (props:any) => {
     return <div className={styles.backdrop} onClick={props.onClose} />
 };
 
-const ModalOverlay = (props) => {
+const ModalOverlay = (props:any) => {
     return (<Card className={styles.modal}>
       <div className={styles.content}>{props.children}</div>
     </Card>)
@@ -15,7 +15,7 @@ const ModalOverlay = (props) => {
 
 
 
-const Modal = props =>{
+const Modal = (props:any):JSX.Element =>{
     const portalElement = document.getElementById('overlays');
     return (
         <>

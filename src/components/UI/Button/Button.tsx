@@ -2,7 +2,7 @@ import React from 'react';
 
 import classes from './Button.module.css';
 
-const Button = (props) => {
+const Button = (props:any):JSX.Element => {
   return (
     <button
       type={props.type || 'button'}

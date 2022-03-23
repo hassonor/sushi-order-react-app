@@ -3,18 +3,19 @@ import Modal from "../UI/Modal/Modal";
 import CartContext from "../../store/contexts/cart-context";
 import {useContext} from "react";
 import CartItem from "./CartItem";
+import FoodItemModel from "../../models/FoodItemModel";
 
-const Cart = (props) => {
+const Cart= (props:any): JSX.Element => {
     const cartCtx = useContext(CartContext);
 
     const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
     const hasItems = cartCtx.items.length > 0;
 
-    const cartItemRemoveHandler = (id) => {
+    const cartItemRemoveHandler = (id:string) => {
         cartCtx.removeItem(id);
     };
 
-    const cartItemAddHandler = (item) => {
+    const cartItemAddHandler = (item:FoodItemModel) => {
         cartCtx.addItem({...item, amount:1});
     };
 

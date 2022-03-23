@@ -3,7 +3,7 @@ import styles from './HeaderCartButton.module.css'
 import CartIcon from "../Cart/CartIcon";
 import CartContext from "../../store/contexts/cart-context";
 
-const HeaderCartButton = props => {
+const HeaderCartButton = (props:any):JSX.Element => {
     const [highlightedButton, setHighlightedButton] = useState(false);
     const cartCtx = useContext(CartContext);
     const numberOfCartItems = cartCtx.items.reduce((curNumber, item)=>{

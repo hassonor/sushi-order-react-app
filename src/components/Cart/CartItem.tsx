@@ -1,6 +1,6 @@
 import styles from './CartItem.module.css';
 
-const CartItem = (props) => {
+const CartItem = (props:any): JSX.Element => {
     const price = `$${props.price.toFixed(2)}`;
 
     return (

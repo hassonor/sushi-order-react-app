@@ -2,7 +2,7 @@ import mealsImage from '../../assets/meals3.avif';
 import styles from './Header.module.css'
 import HeaderCartButton from "./HeaderCartButton";
 
-const Header = props => {
+const Header = (props:any):JSX.Element => {
     return (
         <>
             <header className={styles.header}>

@@ -29,7 +29,7 @@ const DUMMY_ITEMS = [
     },
 ];
 
-const AvailableMeals = props => {
+const AvailableMeals = ():JSX.Element => {
     const mealsList = DUMMY_ITEMS.map(item=><MealItem key={item.id}
                                                       item={item} />);
 
