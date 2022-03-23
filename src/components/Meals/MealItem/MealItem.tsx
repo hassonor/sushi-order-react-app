@@ -3,7 +3,6 @@ import MealItemForm from "./MealItemForm";
 import {useContext} from "react";
 import CartContext from "../../../store/contexts/cart-context";
 import FoodItemModel from "../../../models/FoodItemModel";
-import CartItemModel from "../../../models/CartItemModel";
 
 
 interface Props {
