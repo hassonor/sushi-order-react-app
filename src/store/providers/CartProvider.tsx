@@ -1,4 +1,4 @@
-import {ReactNode, useReducer} from 'react';
+import {ReactNode, useContext, useReducer} from 'react';
 
 import CartContext from '../contexts/cart-context';
 import CartItemModel from "../../models/CartItemModel";
@@ -110,5 +110,14 @@ const CartProvider = ({children}: CartProviderProps) => {
         </CartContext.Provider>
     );
 };
+
+export function useCartContext(){
+    const context = useContext(CartContext);
+
+    if(context === undefined){
+        throw new Error('useCartContext should be used within an CartProvider');
+    }
+    return context;
+}
 
 export default CartProvider;
