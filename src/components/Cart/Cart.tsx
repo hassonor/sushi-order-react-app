@@ -4,6 +4,7 @@ import CartContext from "../../store/contexts/cart-context";
 import {useContext} from "react";
 import CartItem from "./CartItem";
 import FoodItemModel from "../../models/FoodItemModel";
+import CartItemModel from "../../models/CartItemModel";
 
 const Cart= (props:any): JSX.Element => {
     const cartCtx = useContext(CartContext);
@@ -15,7 +16,7 @@ const Cart= (props:any): JSX.Element => {
         cartCtx.removeItem(id);
     };
 
-    const cartItemAddHandler = (item:FoodItemModel) => {
+    const cartItemAddHandler = (item:CartItemModel) => {
         cartCtx.addItem({...item, amount:1});
     };
 
